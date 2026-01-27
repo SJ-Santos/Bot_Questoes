@@ -3,29 +3,33 @@ import telebot
 from dotenv import load_dotenv
 
 load_dotenv()
-
 Token = os.getenv("TELEGRAM_TOKEN")
 
 bot = telebot.TeleBot(Token)
 
 @bot.message_handler(commands=['começo'])
 def send_welcome(message):
-    bot.reply_to(message, "Bem-vindo ao Bot de Questões!")
+    #usar metodo do handlers.py
+    pass
 
 @bot.message_handler(commands=['ajuda'])
 def send_help(message):
-    bot.reply_to(message, "ajuda")
+   #usar metodo do handlers.py
+    pass
 
 @bot.message_handler(commands=['sobre'])
 def send_about(message):
-    bot.reply_to(message, "sobre")
+    #usar metodo do handlers.py
+    pass
 
-@bot.message_handler(commands=['gerar_questao'])
+@bot.message_handler(commands=['gerar_questao']) # o gerar questão ele vai além de gerar as questoes em pdf, tambem vai corrigir
 def gerar_questao(message):
-    bot.reply_to(message, "gerar_questao")
+    #usar metodo do handlers.py
+    pass
 
 @bot.message_handler(commands=['ensinar'])
 def ensinar(message):
-    bot.reply_to(message, "ensinar")
+    #usar metodo do handlers.py
+    pass
 
 bot.infinity_polling()
